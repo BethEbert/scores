@@ -1,5 +1,5 @@
 # Contributing guide
-
+This is a test
 Thank you for considering contributing to the scores project! Contributions of all kinds are welcome!
 
 Types of contributions include bug reports, merge requests, feature requests, and code reviews. Contributions of all kinds are welcome from the community. Contributions which are in line with the roadmap will be prioritised and the roadmaps outlines the intentions for this package.
