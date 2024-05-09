@@ -45,6 +45,10 @@
   - [API](https://scores.readthedocs.io/en/latest/api.html#scores.continuous.mae)
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Mean_Absolute_Error.html)
   - [Wikipedia](https://en.wikipedia.org/wiki/Mean_absolute_error)
+* - Mean Error (Additive Bias)
+  - [API](https://scores.readthedocs.io/en/latest/api.html#scores.continuous.mean_error)
+  - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Additive_and_multiplicative_bias.html)
+  - [Mean Error (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#meanerror)
 * - Mean Squared Error (MSE)
   - [API](https://scores.readthedocs.io/en/latest/api.html#scores.continuous.mse)
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Mean_Squared_Error.html)
@@ -179,8 +183,8 @@
   - API
   - Tutorial
   - Reference(s)
-* - Binary Contingency Table Class (Binary Contingency Scores)
-  - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager)
+* - Binary Contingency Scores and Binary Contingency Tables
+  - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BinaryContingencyManager); [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager)
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - [Methods for dichotomous (yes/no) forecasts](https://www.cawcr.gov.au/projects/verification/#Methods_for_dichotomous_forecasts)
 * -  
@@ -191,6 +195,22 @@
     [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - 
     [Accuracy (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#ACC)
+* -  
+    - Bias Score (Frequency Bias)
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.bias_score)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    [Bias Score (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#BIAS)
+* -  
+    - Critical Success Index (Threat Score)
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.critical_success_index)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    [Threat score (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#CSI)
 * -  
     - False Alarm Rate (Probability of False Detection (POFD))
   -
@@ -218,15 +238,39 @@
 * -  
     - Peirce's Skill Score (True Skill Statistic, Hanssen and Kuipers' Discriminant)
   -
-    [API](https://scores.readthedocs.io/en/develop/api.html#scores.categorical.BasicContingencyManager.peirce_skill_score)
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.peirce_skill_score)
   - 
     [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - 
     [Hanssen and Kuipers discriminant (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#HK)
 * -  
+    - Probability of Detection (POD) (Hit Rate, True Positive Rate, Sensitivity)
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.probability_of_detection)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    [Probability of detection (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#POD)
+* -  
+    - Probability of False Detection (POFD) (False Alarm Rate)
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.probability_of_false_detection)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    [Probability of false detection (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#POFD)
+* -  
+    - Sensitivity (Hit Rate, Probability of Detection (POD), True Positive Rate)
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.sensitivity)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    [Wikipedia](https://en.wikipedia.org/wiki/Sensitivity_and_specificity)
+* -  
     - Specificity
   -
-    [API](https://scores.readthedocs.io/en/develop/api.html#scores.categorical.BasicContingencyManager.specificity)
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.specificity)
   - 
     [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - 
@@ -234,7 +278,7 @@
 * -  
     - Success Ratio
   -
-    [API](https://scores.readthedocs.io/en/develop/api.html#scores.categorical.BasicContingencyManager.success_ratio)
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.success_ratio)
   - 
     [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - 
@@ -242,7 +286,7 @@
 * -  
     - Threat Score (Critical Success Index)
   -
-    [API](https://scores.readthedocs.io/en/develop/api.html#scores.categorical.BasicContingencyManager.threat_score)
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.BasicContingencyManager.threat_score)
   - 
     [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
   - 
@@ -251,14 +295,34 @@
   - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.firm)
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/FIRM.html)
   - [Taggart et al. (2022)](https://doi.org/10.1002/qj.4266)
-* - POD - implementation as used in ROC
+* - POD - implementation as used in ROC (***NOTE:*** **Please use contingency table classes instead, this API may be removed in future**)
   - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.probability_of_detection)   
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/ROC.html)
   - [Probability of detection (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#POD)
-* - POFD - implementation as used in ROC
+* - POFD - implementation as used in ROC (***NOTE:*** **Please use contingency table classes instead, this API may be removed in future**)
   - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.probability_of_false_detection)
   - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/ROC.html)
   - [Probability of false detection (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#POFD)
+* - Threshold Event Operator
+  - [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.ThresholdEventOperator)
+  - [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - &mdash;
+* -  
+    - Make Contingency Manager
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.ThresholdEventOperator.make_contingency_manager)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    &mdash;
+* -  
+    - Make Event Tables
+  -
+    [API](https://scores.readthedocs.io/en/latest/api.html#scores.categorical.ThresholdEventOperator.make_event_tables)
+  - 
+    [Tutorial](https://scores.readthedocs.io/en/latest/tutorials/Binary_Contingency_Scores.html)
+  - 
+    &mdash;    
 ```
 
 ## Statistical Tests
