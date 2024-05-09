@@ -2,16 +2,16 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nci/scores/HEAD?labpath=tutorials%2FExplanation.ipynb)
 
-One-line intro: xarray based verification scores and tools that can scale with Dask if needed. Pandas supported where possible.
-Why use it: trusted implementations, novel metrics, performance, one-stop-shop.
+`scores` is an xarray based package of verification scores and tools that can scale with Dask if needed. It supports pandas where possible.
+It provides trusted implementations of a large selection of standard metrics, as well as several novel metrics.
 
-A **complete list** of the 47 included Metrics, Statistical Techniques and Data Processing Tools is: [available here](https://scores.readthedocs.io/en/develop/included.html).
+A **complete list** of the 47 included metrics, statistical tests and data processing tools is: [available here](https://scores.readthedocs.io/en/develop/included.html).
 
-Here is a **curated selection** of the Metrics and Tools included in `scores`:
+Here is a **curated selection** of the metrics and statistical tests included in `scores`:
 
-| continuous                      | probability | categorical      | statistical tests |
+| Continuous                      | Probability | Categorical      | Statistical tests |
 | ----------                      | ----------- | -----------      | ----------------- |
-| MAE, MSE, RMSE, Flip-Flop Index, Quantile Score, Murphy score, Pearson's Correlation Coefficient, Additive Bias, Multiplicative Bias  | CRPS for CDF, CRPS for ensemble, ROC, Brier Score, Isotonic Regression (reliability diagrams)   | FIRM, Hit Rate, Probability of False Detection, Success Ratio, Peirce's Skill Score  |  Diebold Mariano (with the Harvey et al. 1997 and the Hering and Genton 2011 modifications) |
+| MAE, MSE, RMSE, Additive Bias, Multiplicative Bias, Pearson's Correlation Coefficient, Flip-Flop Index, Quantile Score, Murphy score  | Brier Score, CRPS for CDF, CRPS for ensemble, ROC, Isotonic Regression (reliability diagrams)   | Hit Rate, Probability of False Detection, Success Ratio, Peirce's Skill Score, FIRM  |  Diebold Mariano |
 
 **Notice -- This repository is currently undergoing initial construction and maintenance. It is getting much closer to our goals for version one, but there are a few more things to add. This notice will be removed after the first feature release. In the meantime, please feel free to look around, and don't hesitate to get in touch with any questions (see the contributing guide for how).**
 
@@ -19,26 +19,26 @@ Documentation is hosted at [scores.readthedocs.io](https://scores.readthedocs.io
 Source code is hosted at [github.com/nci/scores](https://github.com/nci/scores).  
 The tutorial gallery is hosted at [as part of the documentation, here](https://scores.readthedocs.io/en/latest/tutorials/Explanation.html).
 
-`scores` is a Python package containing mathematical functions for the verification, evaluation, and optimisation of forecasts, predictions or models. It primarily supports the geoscience and earth system science communities. It also has wide potential application in machine learning, and in domains other than meteorology, geoscience and weather.
+`scores` is a Python package containing mathematical functions for the verification, evaluation, and optimisation of predictions and models. It primarily supports the Earth system science community. It also has wide potential application in machine learning and other domains.
 
-`scores` includes novel scores not commonly found elsewhere (e.g. FIRM, Flip-Flop Index), complex scores (e.g. threshold weighted CRPS), more common scores (e.g. MAE, RMSE) and statistical tests (such as the Diebold Mariano test). Additionally, it provides pre-processing tools for preparing data for scores in a variety of formats including Cumulative Density Functions (CDF). `scores` provides its own implementations where relevant to avoid extensive dependencies.
+`scores` not only includes common scores (e.g. MAE, RMSE), it also includes novel scores not commonly found elsewhere (e.g. FIRM, Flip-Flop Index), complex scores (e.g. threshold weighted CRPS), and statistical tests (such as the Diebold Mariano test). Additionally, it provides pre-processing tools for preparing data for scores in a variety of formats including cumulative density functions (CDF). `scores` provides its own implementations where relevant to avoid extensive dependencies.
 
-`scores` is focused on supporting xarray datatypes for earth system data. It also aims to be compatible with pandas, geopandas, pangeo and work with NetCDF4, hdf5, Zarr and GRIB data sources among others. `scores` is designed to use Dask for scaling and performance.
+`scores` supports xarray datatypes for Earth system data. It also aims to be compatible with pandas, geopandas, pangeo and work with NetCDF4, hdf5, Zarr and GRIB data sources among others. `scores` uses Dask for scaling and performance.
 
-All of the scores and metrics in this package have undergone a thorough statistical and scientific review. Every score has a companion Jupyter Notebook tutorial demonstrating its use in practice.
+All of the scores and metrics in this package have undergone a thorough scientific review. Every score has a companion Jupyter Notebook tutorial that demonstrates its use in practice.
 
 ## Contributing
 To find out more about contributing, see our [contributor's guide](https://github.com/nci/scores/blob/develop/docs/contributing.md).
 
-All interactions in discussions, issues, emails and code (e.g. merge requests, code comments) will be managed according to the expectations outlined in the [ code of conduct ](https://github.com/nci/scores/blob/main/CODE_OF_CONDUCT.md) and in accordance with all relevant laws and obligations. This project is an inclusive, respectful and open project with high standards for respectful behaviour and language. The code of conduct is the Contributor Covenant, adopted by over 40, 000 open source projects. Any concerns will be dealt with fairly and respectfully, with the processes described in the code of conduct.
+All interactions in discussions, issues, emails and code (e.g. merge requests, code comments) will be managed according to the expectations outlined in the [ code of conduct ](https://github.com/nci/scores/blob/main/CODE_OF_CONDUCT.md) and in accordance with all relevant laws and obligations. This project is an inclusive, respectful and open project with high standards for respectful behaviour and language. The code of conduct is the Contributor Covenant, adopted by over 40,000 open source projects. Any concerns will be dealt with fairly and respectfully, with the processes described in the code of conduct.
 
-## Using This Package
+## Using this package
 
 The [installation guide](https://scores.readthedocs.io/en/latest/installation.html) describes four different use cases for installing, using and working with this package.
 
 Most users currently want the *all* installation option. This includes the mathematical functions (scores, metrics, statistical tests etc.), the tutorial notebooks and development libraries.
 
-From a Local Checkout of the Git Repository
+From a local checkout of the git repository
 
 ```bash
 > pip install -e .[all]
@@ -62,14 +62,14 @@ To install the mathematical functions ONLY (no tutorial notebooks, no developer 
 > pip install scores
 ```
 
-## Related Packages
+## Related packages
 
-There are similar packages which should be acknowledged, in particular [xskillscore](https://xskillscore.readthedocs.io/en/stable/) and [climpred](https://github.com/pangeo-data/climpred). These packages both provide overlapping and similar functionality. `scores` provides an additional option to the community and has additional metrics which are not found in those other packages. `scores` seeks to be self-contained with few dependencies, and so re-implements various metrics which are found in other libraries, so that it can be a simple one-stop-shop for the metrics of interest to its userbase.
+There are similar packages which should be acknowledged, in particular [xskillscore](https://xskillscore.readthedocs.io/en/stable/) and [climpred](https://github.com/pangeo-data/climpred). These two packages provide overlapping and similar functionality. `scores` provides a new option to the community with additional metrics not found in those other packages. `scores` is self-contained with few dependencies, and so re-implements the standard metrics which are found in most libraries, making it a simple one-stop-shop for the metrics of interest to users.
 
-## Finding and Downloading Data
+## Finding and downloading data
 
 Other than very small files to support automated testing, this repository does not contain significant data for tutorials and demonstrations. The tutorials demonstrate how to easily download sample data and generate synthetic data.
 
-## Acknowledging This Work
+## Acknowledging this work
 
-If you find this work useful, please consider a citation or acknowledgment of it. A citable DOI is coming soon. This section will be updated in the coming weeks to include the correct citation.
+If you find this work useful, please consider citing or acknowledging it. A citable DOI is coming soon. This section will be updated in the coming weeks to include the correct citation.
