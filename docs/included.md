@@ -216,7 +216,7 @@
   - 
     [Probability of detection (WWRP/WGNE Joint Working Group on Forecast Verification Research)](https://www.cawcr.gov.au/projects/verification/#POD)
 * -  
-    - Peirce's Skill Score (True Skill Statistic, Hannssen and Kuipers' Discriminant)
+    - Peirce's Skill Score (True Skill Statistic, Hanssen and Kuipers' Discriminant)
   -
     [API](https://scores.readthedocs.io/en/develop/api.html#scores.categorical.BasicContingencyManager.peirce_skill_score)
   - 
